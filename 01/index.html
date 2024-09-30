@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        .boxesdiv {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .boxes_in {
+            padding: 150px;
+            width: fit-content;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>hello vue3 :)</h1>
+    <div id="app">
+        <!-- <button @click="changeTitle()">clicke me</button> -->
+        <button @click="age++">++</button>
+        <button @click="toggelPera">{{show ? 'hide pera' :'show pera'}}</button>
+        <h2 v-if="show"> title : {{title}} - authore : {{author}} - Age : {{age}}</h2>
+        <div class="boxesdiv">
+            <div class="boxes_in" v-on:="mouseover">mouseover eve</div>
+            <div class="boxes_in">mouseleave</div>
+            <div class="boxes_in">double click</div>
+            <div class="boxes_in"></div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
